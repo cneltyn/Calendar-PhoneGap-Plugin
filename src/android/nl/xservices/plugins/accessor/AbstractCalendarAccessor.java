@@ -582,7 +582,9 @@ public abstract class AbstractCalendarAccessor {
             Uri calUri = CalendarContract.Calendars.CONTENT_URI;
             ContentValues cv = new ContentValues();
             cv.put(CalendarContract.Calendars.ACCOUNT_NAME, "AccountName");
+            cv.put(CalendarContract.Calendars.OWNER_ACCOUNT, "AccountName");
             cv.put(CalendarContract.Calendars.ACCOUNT_TYPE, CalendarContract.ACCOUNT_TYPE_LOCAL);
+            cv.put(CalendarContract.Calendars.CALENDAR_ACCESS_LEVEL, CalendarContract.Calendars.CAL_ACCESS_READ);
             cv.put(CalendarContract.Calendars.NAME, calendarName);
             cv.put(CalendarContract.Calendars.CALENDAR_DISPLAY_NAME, calendarName);
             if (calendarColor != null) {
